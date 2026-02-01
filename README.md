@@ -15,6 +15,7 @@ REE therefore treats ethical consequence as **runtime geometry**: residue must r
 This is a **specification-first** repository intended to be *enticing to instantiate*.
 
 - `docs/REE_MIN_SPEC.md` — the canonical minimum spec needed to build an REE prototype.
+- `docs/astrocyte_aware_regulatory_stack/` — neuroscience-informed framing of monoaminergic regulation as a slow, spatially resolved, astrocyte-mediated control substrate (documentation-first; no immediate code changes required).
 - `architecture/` — small, implementation-oriented design notes (latent stack, trajectory selection, residue geometry, precision control).
 - `examples/` — concrete environment contracts for a toy world and an embodied (Android-like) instantiation.
 - `roadmap.md` — staged plan for REE‑v0 → REE‑v1.
