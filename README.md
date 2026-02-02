@@ -14,9 +14,10 @@ REE therefore treats ethical consequence as **runtime geometry**: residue must r
 
 This is a **specification-first** repository intended to be *enticing to instantiate*.
 
-- `docs/REE_MIN_SPEC.md` — the canonical minimum spec needed to build an REE prototype.
+- `REE_CORE.md` — the canonical spine of the architecture.
+- `docs/REE_MIN_SPEC.md` — the minimum specification required to build an REE prototype.
 - `docs/astrocyte_aware_regulatory_stack/` — neuroscience-informed framing of monoaminergic regulation as a slow, spatially resolved, astrocyte-mediated control substrate (documentation-first; no immediate code changes required).
-- `architecture/` — small, implementation-oriented design notes (latent stack, trajectory selection, residue geometry, precision control).
+- `architecture/` — implementation-oriented architectural notes and subsystems (latent stack, trajectory selection, residue geometry, memory, modes, and cognitive braids).
 - `examples/` — concrete environment contracts for a toy world and an embodied (Android-like) instantiation.
 - `roadmap.md` — staged plan for REE‑v0 → REE‑v1.
 
@@ -26,7 +27,7 @@ This is a **specification-first** repository intended to be *enticing to instant
 2. Pick an environment contract:
    - Start with `examples/toy_world/environment.md`.
    - Move to `examples/android_world/environment.md` when you want unambiguous harm/homeostasis signals.
-3. Implement `E1`, `E2`, `E3` following `architecture/trajectory_selection.md`.
+3. Implement `E1`, `E2`, `E3` following `architecture/trajectory_selection.md` and the latent/memory constraints in `architecture/latent_stack.md`.
 
 ### Minimal algorithmic sketch
 
@@ -55,18 +56,19 @@ Contributions are welcome in two forms:
 
 See `CONTRIBUTING.md`.
 
+## Architectural subsystems and modes
+
+REE includes several core architectural subsystems and operating modes that modulate information flow,
+precision, replay, and commitment. These are not applications or plugins; they are internal braids
+of the same core engine.
+
+- `architecture/sleep/` — Offline integration (“sleep”): replay, consolidation, and residue‑preserving reprojection.
+- `architecture/default_mode.md` — Internal generative mode: imagination, counterfactual exploration, and reflection without action commitment.
+- `architecture/hippocampal_braid.md` — Path memory and replay: episodic indexing of lived trajectories through ethical geometry.
+- `architecture/language/` — Language as symbolic mediation: trust‑weighted abstraction constrained by harm and residue.
+- `architecture/social/` — Social cognition: other‑model inference, coupling, and misalignment detection.
+
 ## License and citation
 
 - Content is licensed under **CC BY 4.0** (Creative Commons Attribution 4.0 International).
 - If you build on this work, please cite it using `CITATION.cff`.
-## Wiring
-
-- `sleep/` — Offline integration (“sleep”) subsystem (required interface).
-
-## Wiring
-
-- `language/` — Language as emergent symbolic mediation (trust-weighted; constrained by harm/residue).
-
-## Wiring
-
-- `social/` — Social cognition (mirror modelling, otherness inference, coupling).
