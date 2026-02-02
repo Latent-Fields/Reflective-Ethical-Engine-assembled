@@ -27,23 +27,34 @@ All REE-compliant agents implement the following loop.
 2. **Update Latent State**
    - Update a temporally stratified latent stack (L-space) representing the agent’s predictive state across multiple horizons.
 
-3. **Generate Trajectories**
-   - Generate multiple candidate future trajectories ζ via internal rollouts of the world model.
+3. **Generate Affordances**
+   - Generate multiple candidate sensorimotor futures ζ via fast forward rollouts (E2) over the shared sensory latent.
+   - These futures are hypothetical and non-committal.
 
 4. **Score Trajectories**
-   Each trajectory is scored using:
+   Each candidate trajectory is scored using:
    - a **reality constraint** ℱ (predictive coherence and viability),
    - an **ethical cost** M (predicted degradation of self and others),
-   - a **residue field** R (persistent deformation from past harm).
+   - a **residue field** R (persistent geometric deformation from past harm).
 
-5. **Select Trajectory**
+5. **Commit Trajectory (E3)**
    - Select a trajectory under precision-controlled commitment.
+   - Commitment converts a hypothetical future into an *intended* one, making subsequent error epistemically relevant.
 
-6. **Act**
-   - Execute the next action implied by the selected trajectory.
+6. **Act and Observe**
+   - Execute the next action implied by the committed trajectory.
+   - Observe sensory and interoceptive consequences.
 
 7. **Update Residue**
    - If harm or degradation occurred (actual or predicted), update persistent residue.
+
+7a. **Belief and Model Update**
+    - Only after commitment do prediction errors become learning-relevant.
+    - Errors are routed to:
+      - perception (sensory precision-weighted update),
+      - affordance/procedural models (E2),
+      - deep world/self models (E1), and
+      - ethical residue (R), depending on domain.
 
 8. **Offline Integration (Sleep)**
    - Periodically perform offline consolidation to:
@@ -64,6 +75,8 @@ An implementation is **not REE-compliant** if it violates any of the following:
 - Language **cannot override embodied harm sensing**.
 - Precision is **routed and depth-specific**, not global.
 - Offline integration exists and is required for long-term viability.
+- Imagination and counterfactual simulation must be possible **without belief update**.
+- Belief and responsibility arise only through **commitment to action**, not mere prediction.
 
 These invariants define the identity of REE.
 
@@ -93,6 +106,14 @@ Residue is persistent geometric deformation of latent space caused by harm, shap
 ### Precision Control  
 Precision modulates commitment, exploration, and error weighting across depths.
 
+### Default Mode (Internal Generative Mode)
+REE includes an internal operating mode characterised by:
+- reduced sensory precision,
+- elevated hippocampal replay and pattern completion,
+- suppressed trajectory commitment (E3).
+
+This mode supports imagination, counterfactual reasoning, and reflection without action or belief commitment.
+
 ### Offline Integration (Sleep)  
 Offline processes consolidate reality models, integrate residue, and recalibrate precision.
 
@@ -103,6 +124,11 @@ REE treats social cognition as **emergent reuse of core machinery**:
 - **Mirror modelling**: the self generative model is reused to simulate others with reduced coupling and no interoceptive closure.
 - **Social coupling** modulates ethical weight and residue formation.
 - **Language** emerges as a symbolic compression layer that externalises internal state to reduce other-modelling cost, while remaining constrained by embodied harm signals.
+
+Practical ethical rules (e.g., avoiding harm, preferring benefit, disclosing risks and alternatives to support capacity)
+are treated as *operational consequences* of this architecture.
+They emerge from the need to predict harm and benefit, commit under uncertainty, and remain corrigible across time;
+they are not taken as the deepest ethical primitives.
 
 ## 6. Failure Modes (Taxonomy)
 
