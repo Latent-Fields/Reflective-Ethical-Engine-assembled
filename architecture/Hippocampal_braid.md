@@ -35,6 +35,7 @@ The hippocampal braid operates exclusively on paths.
 
 ⸻
 
+
 Stored object: episodic trajectories
 
 The hippocampal braid stores indexed trajectories, not isolated states.
@@ -57,6 +58,52 @@ Where:
 	•	t preserves temporal ordering
 
 These traces encode experienced traversal, not evaluation.
+
+⸻
+
+## Sparsity, segmentation, and pattern completion
+
+The hippocampal braid operates on **sparse, segmented representations** rather than a continuous recording of experience.
+This is not an implementation detail but a functional necessity.
+
+### Event boundaries (segmentation)
+
+Continuous trajectories \(\gamma(t)\) are segmented into **events** at points of:
+- action commitment (E3 collapse)
+- sharp changes in prediction error or precision
+- contextual or motivational shifts
+
+These boundaries define *episodic units* and prevent memory from becoming an undifferentiated stream.
+Segmentation supports recall, replay, and narrative recomposition without requiring full fidelity replay of lived time.
+
+### Sparsity and indexing
+
+Only a sparse subset of latent states along a trajectory are indexed.
+Indexing favours:
+- decision points
+- surprising transitions
+- regions of high ethical curvature
+
+This sparsity enables efficient retrieval and avoids storing exhaustive state histories.
+
+### Pattern separation
+
+Similar trajectories are **actively separated** at storage time.
+Small differences in context, choice, or experienced curvature are amplified to prevent interference.
+This allows distinct episodes to coexist even when they occupy nearby regions of latent space.
+
+### Pattern completion and imaginative filling-in
+
+During recall or replay, partial cues can trigger **pattern completion**, reconstructing a plausible full trajectory
+from sparse indices.
+
+This mechanism supports:
+- imagination and counterfactual exploration
+- daydreaming and spontaneous recombination
+- the experience of "what might have happened" or "what could happen next"
+
+Importantly, completed trajectories are *hypotheses*, not commitments:
+they do not overwrite perception, policy, or residue unless subsequently enacted and committed via E3.
 
 ⸻
 
