@@ -22,7 +22,7 @@ All REE-compliant agents implement the following loop.
 1. **Sense**
    - Receive multi-modal exteroceptive inputs.
    - Receive interoceptive and homeostatic state signals.
-   - Receive damage / degradation signals.
+   - Receive damage / degradation / reward  signals even if noisy (these may be subsumed as a subset of homeoastatic signals of course).
 
 2. **Update Latent State**
    - Update a temporally stratified latent stack (L-space) representing the agent’s predictive state across multiple horizons.
@@ -86,7 +86,7 @@ These invariants define the identity of REE.
 Agents sense:
 - the external world (multi-modal),
 - internal state (interoception, homeostasis),
-- and degradation / harm signals.  
+- and degradation / harm signals and signals associated with reward.  
 
 ### Latent Stack (L-Space)  
 Internal state is represented across multiple predictive depths, enabling short- and long-horizon reasoning.
@@ -125,10 +125,10 @@ REE treats social cognition as **emergent reuse of core machinery**:
 - **Social coupling** modulates ethical weight and residue formation.
 - **Language** emerges as a symbolic compression layer that externalises internal state to reduce other-modelling cost, while remaining constrained by embodied harm signals.
 
-Practical ethical rules (e.g., avoiding harm, preferring benefit, disclosing risks and alternatives to support capacity)
-are treated as *operational consequences* of this architecture.
-They emerge from the need to predict harm and benefit, commit under uncertainty, and remain corrigible across time;
-they are not taken as the deepest ethical primitives.
+Practical ethical rules (e.g., Beneficence, nonmaleficence, autonomy, and justice as seen as the 4 pillars of medical ethics)
+are treated as *operational consequences* of this architecture. Each of the principles fall out of the architecture and are not taken as the deepest ethical principles.  
+They emerge from the need to predict harm and benefit, commit under uncertainty, and remain corrigible across time; for an agent that exists in a universe where epistemic humility above kmowing that to the agent all it can be sure of is that it exists, that the universe it inhabits exists, and whose architecture goes to support the idea that other agents similar to itself inhabit the shared universe and form a delicate part of what supports their existance. 
+
 
 ## 6. Failure Modes (Taxonomy)
 
@@ -159,9 +159,9 @@ REE specifies what it means for an agent to **remain responsible for its actions
 If an implementation can:
 - act,
 - learn,
-- harm,
+- harm or benefit self and others,
 - remember,
-- and still choose differently later because of that harm,
+- and still choose differently later because of that moral residue after the fact of action selection,
 
 then it is behaving as an REE-compliant system.
 
