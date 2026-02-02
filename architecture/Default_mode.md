@@ -40,6 +40,21 @@ The Default Mode satisfies these requirements.
 
 Information flow characteristics
 
+⸻
+
+Temporal displacement and replayed smear
+
+The Default Mode operates over a temporally displaced latent manifold rather than a single-time-slice state.
+
+Hippocampal replay and E1 internal generation sample *smeared bundles of future- and past-oriented predictions* across multiple horizons (sensory, affordance, narrative, affective). These bundles represent candidate trajectories through time, not present-moment commitments.
+
+Crucially:
+	•	The temporal smear is explored without phase-locking to action
+	•	Predictions remain unaligned to motor execution timing
+	•	The illusion of a unitary “now” is explicitly *not* constructed in this mode
+
+This preserves a strict separation between imagination and lived experience.
+
 In Default Mode, effective information flow differs from task-engaged mode in specific, constrained ways.
 
 Sensory precision modulation

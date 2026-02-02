@@ -32,7 +32,23 @@ Sensory modalities are fused *before* entering the stack into a shared sensory l
 Downstream processes may not directly overwrite \(z_\gamma\); influence is restricted to
 prediction-error updates and precision (gain) modulation.
 
+
 REE does not require explicit oscillations for v0. Oscillatory phase can be added later as a scheduling / gating mechanism.
+
+Conceptually, oscillatory nesting is treated as the carrier for cross-horizon coordination: different predictive depths can be coupled (or decoupled) by phase-aligned gating, enabling stable multi-timescale coherence without allowing deeper regimes to overwrite sensory state.
+
+⸻
+
+Temporal displacement and the constructed present
+
+The latent stack does not represent a single “now”. It represents a **temporally displaced bundle of predictions** across multiple future offsets, stratified by depth.
+
+A unitary present-moment experience is not a property of \(z_\gamma\) alone. It is constructed downstream when a **trajectory** through the displaced bundle is selected and committed (see `trajectory_selection.md`):
+
+- In committed / task-engaged mode, commitment phase-aligns temporally displaced predictions with motor execution timing, enforcing cross-horizon coherence so the unfolding trajectory is experienced as a single present.
+- In Default Mode, displaced rollouts are explored without commitment or phase-locking to action (see `Default_mode.md`), and therefore do not construct a unitary present-moment “now”.
+
+This preserves perceptual corrigibility while still allowing deep regime predictors (\(z_\delta\)) to bias selection through precision and scoring rather than semantic overwrite.
 
 This separation preserves perceptual corrigibility: illusions and misperceptions arise from
 misweighted precision or suppressed error, not from semantic overwrite of sensory state.

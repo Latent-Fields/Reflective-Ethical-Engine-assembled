@@ -39,6 +39,21 @@ Where (implementation-dependent, but conceptually stable):
 
 ## Commitment as precision gating
 
+⸻
+
+Temporal collapse and the constructed present
+
+E3 does not select an instantaneous action. It selects a **trajectory through a temporally displaced latent space** whose predictions span multiple future offsets (sensory, motor, procedural, affective).
+
+Commitment performs a *temporal collapse*:
+	•	It phase-aligns temporally displaced predictions with motor execution timing
+	•	It locks a smeared predictive bundle into an action-relevant frame
+	•	It enforces cross-horizon coherence so the trajectory is experienced as a single unfolding “now”
+
+The subjective present therefore corresponds to a **phase-stable, committed trajectory**, not to a time-slice of perception.
+
+Without commitment, temporally displaced rollouts remain exploratory and do not generate a unitary present-moment experience.
+
 Commitment is implemented as a **precision increase** at action/control depth (\(\beta\) and sometimes \(\gamma\)):
 
 - reduce action entropy for the selected plan
