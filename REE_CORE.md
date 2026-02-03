@@ -74,6 +74,7 @@ An implementation is **not REE-compliant** if it violates any of the following:
 - Moral residue **cannot be erased**, only integrated and contextualised.
 - Language **cannot override embodied harm sensing**.
 - Precision is **routed and depth-specific**, not global.
+- Attention is realised through **precision modulation**, not symbolic control or content injection.
 - Offline integration exists and is required for long-term viability.
 - Imagination and counterfactual simulation must be possible **without belief update**.
 - Belief and responsibility arise only through **commitment to action**, not mere prediction.
@@ -91,8 +92,19 @@ Agents sense:
 ### Latent Stack (L-Space)  
 Internal state is represented across multiple predictive depths, enabling short- and long-horizon reasoning.
 
-### Trajectory Selection (E3)  
-Future action is chosen by evaluating candidate trajectories against reality, ethics, and residue under precision control.
+### Self (Operational Definition)
+The Self in REE is not a static state or symbol.
+It is the **currently committed trajectory prefix**, continuously re-anchored to shared sensory evidence and hippocampal path memory,
+and extended forward by fast rollouts of possible future selves.
+
+### Trajectory Selection and Commitment (E3)
+E3 selects and commits to a future action trajectory by evaluating candidate sensorimotor futures against reality, ethics, and residue.
+
+E3 has two inseparable roles:
+- a **commitment gate**, which selects a coherent future and raises precision on the chosen plan, and
+- a **control plane**, which tunes precision, gain, exploration horizon, replay rate, and operating mode across the system.
+
+Commitment converts a hypothetical future into an *intended* one, making subsequent outcomes epistemically and ethically attributable.
 
 ### Ethical Cost M  
 Ethical cost is the predicted degradation of:
@@ -103,8 +115,9 @@ discounted by coupling strength.
 ### Moral Residue R  
 Residue is persistent geometric deformation of latent space caused by harm, shaping future choice.
 
-### Precision Control  
+### Precision Control and Attention
 Precision modulates commitment, exploration, and error weighting across depths.
+Attention is implemented as **precision (gain) modulation**: it alters the weighting of prediction errors rather than injecting new sensory content.
 
 ### Default Mode (Internal Generative Mode)
 REE includes an internal operating mode characterised by:
@@ -112,7 +125,9 @@ REE includes an internal operating mode characterised by:
 - elevated hippocampal replay and pattern completion,
 - suppressed trajectory commitment (E3).
 
-This mode supports imagination, counterfactual reasoning, and reflection without action or belief commitment.
+In Default Mode, generated trajectories are explicitly treated as **hypotheses**, not commitments.
+Sensory precision is reduced, E3 commitment thresholds are raised, and belief update is suspended,
+allowing imagination and counterfactual exploration without loss of self-coherence.
 
 ### Offline Integration (Sleep)  
 Offline processes consolidate reality models, integrate residue, and recalibrate precision.
