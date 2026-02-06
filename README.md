@@ -45,7 +45,7 @@ REE does **not** slap a Large Language Model (LLM) on top of planning.
 
 **Claim:** the architecture already contains most ingredients of language-like systems:
 multi-timescale prediction, shared latent substrate, social/joint attention constraints, and commitment control.
-Language (and grammar) emerges as an abstraction of **joint attention and system function** — i.e., it can represent the architecture itself.
+Language (and grammar) emerges as an abstraction of **joint attention and control state** — i.e., it can represent the architecture itself.
 The similarity to modern LLMs is not incidental, but REE is not “LLM + extras.”
 
 If you treat language as an external interface only, you have changed the thesis.
