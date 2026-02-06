@@ -8,7 +8,60 @@ REE is built around a simple claim:
 
 > Ethics cannot be compiled away into design‑time rules. Any agent acting under uncertainty while affecting others accumulates **moral residue** (persistent cost) even when it makes the “best available” choice.
 
-REE therefore treats ethical consequence as **runtime geometry**: residue must remain representable and must continue to shape future trajectory selection.
+REE therefore treats ethical consequence as **runtime function**
+
+## 🚧 The Non-Negotiables (Read This Before You “Fix” REE)
+
+REE makes three claims that will feel wrong if you expect a conventional cognitive architecture.
+They are not decoration. They are the point.
+
+### 1) No “Ethics Module.” No Moral Scoring Layer.
+REE does **not** add an explicit moral objective, moral reward, or ethical scoring function on top of action selection.
+
+**Claim:** what looks like ethics is a consequence of **base learning dynamics** (avoid harm / seek reward) **plus a representational symmetry**:
+when other agents are represented *as self-like* in the mechanics of prediction and learning, “care for others” is not an overlay — it emerges as the same machinery applied under a self↔other mapping.
+
+If you feel the urge to add an ethics layer, you have changed the thesis.
+
+**Progress means:** showing (or refuting) that care-like behaviour can emerge from this symmetry under realistic constraints.
+
+---
+
+### 2) Coherence is Not Just a Metric — It Is a Temporal Binding Constraint
+REE does **not** treat coherence as only “latent similarity,” “probabilistic consistency,” or a static alignment score.
+
+**Claim:** coherence is partly a **timing / phase compatibility** problem.
+Higher-degree perceptual representations bind when the relevant representational traffic is temporally compatible — and hippocampus-like rollout traffic participates in that binding.
+(You do not need to simulate neurons to test this; you need an explicit temporal/phase formalism.)
+
+If you reduce coherence to a static check, you have changed the thesis.
+
+**Progress means:** implementing phase-compatible binding constraints and testing whether they stabilise multi-timescale prediction and commitment.
+
+---
+
+### 3) Language Is Not “Bolted On” — It Emerges as Functional Self-Representation
+REE does **not** slap a Large Language Model (LLM) on top of planning.
+
+**Claim:** the architecture already contains most ingredients of language-like systems:
+multi-timescale prediction, shared latent substrate, social/joint attention constraints, and commitment control.
+Language (and grammar) emerges as an abstraction of **joint attention and system function** — i.e., it can represent the architecture itself.
+The similarity to modern LLMs is not incidental, but REE is not “LLM + extras.”
+
+If you treat language as an external interface only, you have changed the thesis.
+
+**Progress means:** demonstrating that predictive pressures inside REE yield language-like internal structure, and that language acts as a control/coordination layer grounded in the system’s modes and commitments.
+
+---
+
+## What This Repo Is For
+
+This repository exists to make the above claims precise enough to build and falsify:
+- a minimal REE slice that demonstrates mode switching + commitment + coherence,
+- a self↔other symmetry experiment that tests care emergence without explicit moral scoring,
+- a temporal/phase coherence implementation that can be compared against a static baseline,
+- and a language pathway that is *grounded* in REE’s control and joint attention, not an overlay.
+
 
 ## What’s in this repository
 
