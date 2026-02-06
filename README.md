@@ -52,6 +52,8 @@ If you treat language as an external interface only, you have changed the thesis
 
 **Progress means:** demonstrating that predictive pressures inside REE yield language-like internal structure, and that language acts as a control/coordination layer grounded in the system’s modes and commitments.
 
+
+Together, these claims assert that ethics, coherence, and language are not separate faculties but different projections of the same underlying predictive–control dynamics.
 ---
 
 ## What This Repo Is For
@@ -97,6 +99,8 @@ Where:
 - \(\mathcal{F}\) is the **reality constraint** (a computable free-energy proxy).
 - \(M\) is **ethical cost** (predicted degradation of self/other homeostatic variables).
 - \(\Phi_R\) is the **residue field** (persistent curvature / repulsor potential).
+
+This objective is not a fixed loss to be minimized globally; it is evaluated under mode-dependent control parameters and evolving representational symmetry.
 
 ## Contribution philosophy
 
