@@ -6,7 +6,7 @@ A reference architecture for **ethical agency under uncertainty**.
 
 REE is built around a simple claim:
 
-> Ethics cannot be compiled away into design‑time rules. Any agent acting under uncertainty while affecting others accumulates **moral residue** (persistent cost) even when it makes the “best available” choice.
+> Ethics cannot be compiled away into design‑time rules. Any agent acting under uncertainty while affecting others accumulates **moral residue** in memory and learning. Ethics does not come without error. 
 
 REE therefore treats ethical consequence as **runtime function**
 
