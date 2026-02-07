@@ -47,7 +47,11 @@ Confusion between layers is the source of almost all damage.
 These are the commitments that define what REE *is*.
 
 Examples:
-- Ethics emerges from base learning dynamics plus self↔other representational symmetry.
+- Cognition is predictive, iterative, and multi-timescale
+- There is a strict separation between representation (content) and regulation (control)
+- Ethics emerges from constraint, not optimisation and this includes constraints on learning dynamics plus self other representational symmetry
+- Stability, not maximal performance, is the primary viability criterion
+- Runaway behaviour is a control failure, not a representational one
 - Coherence includes temporal / phase binding, not just static metrics.
 - Language is functional self-representation and joint attention, not a bolted-on module.
 
