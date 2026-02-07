@@ -1,5 +1,7 @@
 # Control plane (precision, gain, and mode regulation)
 
+> **📍 Canonical Location:** This content has been migrated to [`docs/architecture/control_plane.md`](../docs/architecture/control_plane.md) with formal claim typing and dependency tracking. This file is preserved for compatibility.
+
 ## Role in REE
 
 The control plane in the Reflective Ethical Engine (REE) governs **how the system operates**, not *what it represents*.

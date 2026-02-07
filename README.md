@@ -70,11 +70,17 @@ This repository exists to make the above claims precise enough to build and fals
 This is a **specification-first** repository intended to be *enticing to instantiate*.
 
 - `REE_CORE.md` — the canonical spine of the architecture.
-- `docs/REE_MIN_SPEC.md` — the minimum specification required to build an REE prototype.
-- `docs/astrocyte_aware_regulatory_stack/` — neuroscience-informed framing of monoaminergic regulation as a slow, spatially resolved, astrocyte-mediated control substrate (documentation-first; no immediate code changes required).
-- `architecture/` — implementation-oriented architectural notes and subsystems (latent stack, trajectory selection, residue geometry, memory, modes, and cognitive braids).
+- `docs/` — **structured, dependency-aware documentation system**
+  - `docs/README.md` — navigation guide to canonical documentation
+  - `docs/invariants.md` — 17 non-negotiable architectural invariants
+  - `docs/architecture/` — canonical definitions of core components (E1, E2, E3, L-space, control plane, etc.)
+  - `docs/claims/` — typed claim registry with dependencies
+  - `docs/REE_MIN_SPEC.md` — minimum specification required to build an REE prototype
+  - `docs/changelog.md` — documentation refactoring history
+- `architecture/` — supplementary implementation notes and subsystems (see also canonical docs in `docs/architecture/`)
 - `examples/` — concrete environment contracts for a toy world and an embodied (Android-like) instantiation.
 - `roadmap.md` — staged plan for REE‑v0 → REE‑v1.
+- `DANIEL_README.md` — refinement process and layer discipline
 
 ## Quick start (for implementers)
 
