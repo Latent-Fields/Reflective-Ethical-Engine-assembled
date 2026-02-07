@@ -1,6 +1,8 @@
 
-
 # Reflective Ethical Engine — Architectural Overview
+
+> **📌 NOTE:** For canonical definitions of core components, see [../docs/architecture/](../docs/architecture/).  
+> This document provides a high-level architectural overview. Individual component files (E1.md, E2.md, E3.md, etc.) in this directory contain detailed specifications and are preserved as original sources.
 
 The Reflective Ethical Engine (REE) is a cognitive architecture organised around a simple but demanding claim:
 

@@ -1,6 +1,7 @@
 # Reflective‑Ethical Engine (REE)
 
-Start here: `REE_CORE.md` (canonical spine of the architecture).
+**Start here:** `REE_CORE.md` (canonical spine of the architecture).  
+**Explore concepts:** [`docs/`](docs/) (structured documentation with canonical definitions and claims registry)
 
 A reference architecture for **ethical agency under uncertainty**.
 
