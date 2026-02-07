@@ -108,8 +108,25 @@ This is the “buildable” layer.
 Examples:
 - E1 / E2 / E3 interfaces.
 - Control plane knobs and modes.
-- Folder structure under `architecture/`.
+- Folder structure under `architecture/`
 - Minimum spec in `REE_MIN_SPEC.md`.
+
+1.	E1 is a predictive field, not a deep network
+	•	Shallow, recurrent, multi-rate
+	•	Iterative refinement over a shared latent space
+	•	Columns as local predictive kernels
+	2.	Explicit separation of planes
+	•	Content plane (L-space, entities, errors)
+	•	Control plane (precision, gain, clocks, plasticity)
+This is now an architectural boundary, not just a conceptual one.
+	3.	Entities as emergent but real variables
+	•	Sparse, persistent, bindable structures
+	•	Not forced symbols, but not denied either
+	•	Error ownership is entity-linked
+	4.	Control plane is first-class
+	•	Not “attention layers”
+	•	Not scalar “reward”
+	•	Vector-valued knobs with partial locality
 
 **Where these live**
 - `architecture/`
