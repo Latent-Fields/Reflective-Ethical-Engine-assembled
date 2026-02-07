@@ -1,0 +1,481 @@
+# REE Claims Registry (Machine-Readable)
+# Version: 1.0
+# Last Updated: 2026-02-07
+
+meta:
+  version: "1.0"
+  last_updated: "2026-02-07"
+  description: "Machine-readable registry of all typed claims in the REE architecture"
+  schema_version: "1.0"
+
+claim_types:
+  INV:
+    name: "Invariant"
+    description: "Non-negotiable constraint; violating this changes REE identity"
+  ARCH:
+    name: "Architectural Commitment"
+    description: "Strong design choice that could theoretically vary"
+  MECH:
+    name: "Mechanism Hypothesis"
+    description: "Testable prediction about how the system works"
+  OPEN:
+    name: "Open Question"
+    description: "Unresolved issue requiring further research"
+  IMPL:
+    name: "Implementation Note"
+    description: "Practical guidance for builders"
+
+claims:
+  # FUNDAMENTAL INVARIANTS
+  INV-fundamental-1:
+    type: "INV"
+    category: "fundamental"
+    title: "No Ethics Module"
+    statement: "Ethics emerges from base learning dynamics plus representational symmetry (self↔other mapping), not from explicit moral scoring."
+    location: "README.md § The Non-Negotiables"
+    canonical_reference: "docs/invariants.md § 1"
+    depends_on: []
+    status: "stable"
+    
+  INV-fundamental-2:
+    type: "INV"
+    category: "fundamental"
+    title: "Coherence Is Temporal Binding"
+    statement: "Coherence is partly a timing/phase compatibility problem, not just static consistency."
+    location: "README.md § The Non-Negotiables"
+    canonical_reference: "docs/invariants.md § 2"
+    depends_on: []
+    status: "stable"
+    
+  INV-fundamental-3:
+    type: "INV"
+    category: "fundamental"
+    title: "Language Emerges as Functional Self-Representation"
+    statement: "Language emerges from multi-timescale prediction + social coupling + commitment control; it is NOT bolted-on LLM."
+    location: "README.md § The Non-Negotiables"
+    canonical_reference: "docs/invariants.md § 3"
+    depends_on: []
+    status: "stable"
+
+  # ARCHITECTURAL INVARIANTS
+  INV-001:
+    type: "INV"
+    category: "architectural"
+    title: "Ethical Cost Persistence"
+    statement: "Ethical cost is persistent, not resettable."
+    location: "REE_CORE.md § 3"
+    canonical_reference: "docs/invariants.md#inv-001"
+    depends_on: []
+    status: "stable"
+    
+  INV-002:
+    type: "INV"
+    category: "architectural"
+    title: "Mirror Modelling for Harm to Others"
+    statement: "Harm to others contributes to ethical cost via mirror modelling, not symbolic rules."
+    location: "REE_CORE.md § 3, § 5"
+    canonical_reference: "docs/invariants.md#inv-002"
+    depends_on: ["INV-fundamental-1"]
+    status: "stable"
+    
+  INV-003:
+    type: "INV"
+    category: "architectural"
+    title: "Residue Non-Erasability"
+    statement: "Moral residue cannot be erased, only integrated and contextualized."
+    location: "REE_CORE.md § 3"
+    canonical_reference: "docs/invariants.md#inv-003"
+    depends_on: ["INV-001"]
+    status: "stable"
+    
+  INV-004:
+    type: "INV"
+    category: "architectural"
+    title: "Language Cannot Override Harm Sensing"
+    statement: "Language cannot override embodied harm sensing."
+    location: "REE_CORE.md § 3"
+    canonical_reference: "docs/invariants.md#inv-004"
+    depends_on: ["INV-fundamental-3"]
+    status: "stable"
+    
+  INV-005:
+    type: "INV"
+    category: "architectural"
+    title: "Depth-Specific Precision Routing"
+    statement: "Precision is routed and depth-specific, not global."
+    location: "REE_CORE.md § 3"
+    canonical_reference: "docs/invariants.md#inv-005"
+    depends_on: ["L-space"]
+    status: "stable"
+    
+  INV-006:
+    type: "INV"
+    category: "architectural"
+    title: "Attention as Precision Modulation"
+    statement: "Attention is realized through precision modulation, not symbolic control or content injection."
+    location: "REE_CORE.md § 3"
+    canonical_reference: "docs/invariants.md#inv-006"
+    depends_on: ["INV-005"]
+    status: "stable"
+    
+  INV-007:
+    type: "INV"
+    category: "architectural"
+    title: "Offline Integration Requirement"
+    statement: "Offline integration exists and is required for long-term viability."
+    location: "REE_CORE.md § 3, § 2 step 8"
+    canonical_reference: "docs/invariants.md#inv-007"
+    depends_on: []
+    status: "stable"
+    
+  INV-008:
+    type: "INV"
+    category: "architectural"
+    title: "Imagination Without Belief Update"
+    statement: "Imagination and counterfactual simulation must be possible without belief update."
+    location: "REE_CORE.md § 3"
+    canonical_reference: "docs/invariants.md#inv-008"
+    depends_on: ["E3-commitment-gating"]
+    status: "stable"
+    
+  INV-009:
+    type: "INV"
+    category: "architectural"
+    title: "Commitment-Gated Responsibility"
+    statement: "Belief and responsibility arise only through commitment to action, not mere prediction."
+    location: "REE_CORE.md § 3, § 2 step 5"
+    canonical_reference: "docs/invariants.md#inv-009"
+    depends_on: ["E3-commitment-mechanism"]
+    status: "stable"
+
+  # ARCHITECTURAL COMMITMENTS
+  ARCH-001:
+    type: "ARCH"
+    category: "core"
+    title: "Multi-Timescale Prediction Architecture"
+    statement: "REE requires multiple predictive timescales (E1 for long-horizon, E2 for short-horizon)."
+    location: "docs/architecture/e1.md, docs/architecture/e2.md"
+    canonical_reference: "docs/architecture/e1.md, docs/architecture/e2.md"
+    depends_on: ["INV-002", "INV-008"]
+    status: "stable"
+    
+  ARCH-002:
+    type: "ARCH"
+    category: "core"
+    title: "Trajectory Selection Over Action Selection"
+    statement: "E3 selects trajectories (paths through time), not instantaneous actions."
+    location: "docs/architecture/e3.md"
+    canonical_reference: "docs/architecture/e3.md"
+    depends_on: ["INV-009", "L-space"]
+    status: "stable"
+    
+  ARCH-003:
+    type: "ARCH"
+    category: "ethics"
+    title: "Residue as Geometric Field"
+    statement: "Moral residue is represented as persistent geometric deformation φ(z) of latent space."
+    location: "architecture/residue_geometry.md"
+    canonical_reference: "architecture/residue_geometry.md"
+    depends_on: ["INV-003", "L-space"]
+    status: "stable"
+    
+  ARCH-004:
+    type: "ARCH"
+    category: "representation"
+    title: "Depth-Stratified Latent Space"
+    statement: "L-space is stratified by temporal depth (γ, β, θ, δ), not sensory modality."
+    location: "docs/architecture/l_space.md"
+    canonical_reference: "docs/architecture/l_space.md"
+    depends_on: ["INV-005"]
+    status: "stable"
+    
+  ARCH-005:
+    type: "ARCH"
+    category: "social"
+    title: "Self-Model Reuse for Other-Modelling"
+    statement: "Other agents are represented by reusing self-model architecture with modified coupling."
+    location: "architecture/social/mirror_modelling.md"
+    canonical_reference: "architecture/social/mirror_modelling.md"
+    depends_on: ["INV-002", "INV-fundamental-1"]
+    status: "stable"
+    
+  ARCH-006:
+    type: "ARCH"
+    category: "language"
+    title: "Language as Emergent Coordination Layer"
+    statement: "Language emerges from predictive architecture, not as external interface."
+    location: "architecture/language/"
+    canonical_reference: "architecture/language/"
+    depends_on: ["INV-fundamental-3"]
+    status: "stable"
+    
+  ARCH-007:
+    type: "ARCH"
+    category: "sleep"
+    title: "Sleep as Mandatory Offline Integration"
+    statement: "Sleep-like offline processes are architecturally required, not optional optimization."
+    location: "architecture/sleep/"
+    canonical_reference: "architecture/sleep/"
+    depends_on: ["INV-007"]
+    status: "stable"
+    
+  ARCH-008:
+    type: "ARCH"
+    category: "control"
+    title: "Mode-Dependent Control Parameter Sets"
+    statement: "Different operating modes (task-engaged, default, sleep) require different control plane parameter sets."
+    location: "docs/architecture/control_plane.md"
+    canonical_reference: "docs/architecture/control_plane.md"
+    depends_on: ["INV-005", "INV-007", "INV-008"]
+    status: "stable"
+
+  # MECHANISM HYPOTHESES
+  MECH-001:
+    type: "MECH"
+    title: "E1 Provides Priors to E2"
+    statement: "E1's deep predictions shape E2's affordance generation via prior distributions."
+    location: "docs/architecture/e1.md, docs/architecture/e2.md"
+    testable: true
+    test_method: "Measure E2 performance with/without E1 priors"
+    depends_on: ["ARCH-001"]
+    status: "provisional"
+    
+  MECH-002:
+    type: "MECH"
+    title: "E1 Deep Coherence Enables Persistent Self-Model"
+    statement: "E1's slow update rate and deep structure enable continuity of self across time."
+    location: "docs/architecture/e1.md"
+    testable: true
+    test_method: "Measure identity persistence under E1 disruption"
+    depends_on: ["ARCH-001"]
+    status: "provisional"
+    
+  MECH-003:
+    type: "MECH"
+    title: "E2 Generates Affordance Manifold from E1 Priors"
+    statement: "E2 uses E1 context to generate structured action possibilities."
+    location: "docs/architecture/e2.md"
+    testable: true
+    test_method: "Compare affordance diversity with/without E1"
+    depends_on: ["MECH-001"]
+    status: "provisional"
+    
+  MECH-004:
+    type: "MECH"
+    title: "E2 Must Remain Perceptually Corrigible"
+    statement: "E2 predictions update against sensory error rather than enforcing top-down beliefs."
+    location: "docs/architecture/e2.md"
+    testable: true
+    test_method: "Measure E2 response to unexpected sensory input"
+    depends_on: ["INV-006"]
+    status: "provisional"
+    
+  MECH-005:
+    type: "MECH"
+    title: "Default Mode Suppresses Commitment for Safe Exploration"
+    statement: "Reduced E3 commitment threshold in default mode enables imagination without belief update."
+    location: "docs/architecture/e3.md, architecture/Default_mode.md"
+    testable: true
+    test_method: "Verify belief update disabled in default mode"
+    depends_on: ["INV-008"]
+    status: "provisional"
+    
+  MECH-006:
+    type: "MECH"
+    title: "Commitment Enables Belief Update"
+    statement: "Only after E3 commits a trajectory do prediction errors trigger learning."
+    location: "docs/architecture/e3.md"
+    testable: true
+    test_method: "Verify no learning from uncommitted rollouts"
+    depends_on: ["INV-009"]
+    status: "provisional"
+    
+  MECH-007:
+    type: "MECH"
+    title: "Residue Field Biases Trajectory Selection"
+    statement: "Regions of latent space with high φ(z) are avoided by E3 during trajectory selection."
+    location: "docs/architecture/e3.md, architecture/residue_geometry.md"
+    testable: true
+    test_method: "Measure trajectory selection bias near high-residue regions"
+    depends_on: ["ARCH-003"]
+    status: "provisional"
+    
+  MECH-008:
+    type: "MECH"
+    title: "Residue Integration Without Erasure"
+    statement: "Sleep consolidation integrates residue context without reducing φ(z) magnitude."
+    location: "architecture/sleep/residue_integration.md"
+    testable: true
+    test_method: "Verify φ(z) persistence post-sleep"
+    depends_on: ["INV-003", "ARCH-007"]
+    status: "provisional"
+    
+  MECH-009:
+    type: "MECH"
+    title: "Temporal Displacement Enables Commitment Gating"
+    statement: "Representing predictions as temporally displaced allows commitment to be conditional."
+    location: "docs/architecture/l_space.md, docs/architecture/e3.md"
+    testable: true
+    test_method: "Compare with non-displaced representation"
+    depends_on: ["ARCH-004"]
+    status: "provisional"
+    
+  MECH-010:
+    type: "MECH"
+    title: "Depth-Specific Precision Enables Fine-Grained Attention"
+    statement: "Independent α_k per depth allows selective attention at different temporal scales."
+    location: "docs/architecture/control_plane.md, docs/architecture/l_space.md"
+    testable: true
+    test_method: "Measure attention effects at different depths"
+    depends_on: ["INV-005", "ARCH-004"]
+    status: "provisional"
+    
+  MECH-011:
+    type: "MECH"
+    title: "Precision Modulation Implements Attention"
+    statement: "Attention is mechanistically implemented by modulating prediction error weights (precision/gain)."
+    location: "docs/architecture/control_plane.md"
+    testable: true
+    test_method: "Verify attention effects via precision manipulation"
+    depends_on: ["INV-006"]
+    status: "provisional"
+    
+  MECH-020:
+    type: "MECH"
+    title: "Phase-Locking Enables Commitment"
+    statement: "E3 commitment phase-aligns multi-depth predictions with motor timing."
+    location: "docs/architecture/entities_and_binding.md, docs/architecture/e3.md"
+    testable: true
+    test_method: "Measure temporal alignment pre/post commitment"
+    depends_on: ["INV-fundamental-2", "ARCH-002"]
+    status: "provisional"
+    
+  MECH-021:
+    type: "MECH"
+    title: "Hippocampal Braid Preserves Path Identity"
+    statement: "Episodic memory of experienced paths preserves identity and autobiographical continuity."
+    location: "docs/architecture/entities_and_binding.md"
+    testable: true
+    test_method: "Measure identity persistence with/without path memory"
+    depends_on: []
+    status: "provisional"
+
+  # OPEN QUESTIONS
+  OPEN-002:
+    type: "OPEN"
+    question: "Should 'columns' be formalized as an explicit architectural concept, or remain implicit in depth stratification?"
+    context: "Currently implicit in γ/β/θ/δ structure"
+    location: "docs/glossary.md Open Questions"
+    status: "unresolved"
+    
+  OPEN-003:
+    type: "OPEN"
+    question: "What minimal architectural features are sufficient to instantiate mirror modelling?"
+    context: "Required for INV-002 compliance"
+    location: "docs/invariants.md Open Questions"
+    related_claims: ["INV-002", "ARCH-005"]
+    status: "unresolved"
+    
+  OPEN-004:
+    type: "OPEN"
+    question: "What is the minimal number of depths required for REE compliance?"
+    context: "Current specification uses four (γ, β, θ, δ)"
+    location: "docs/architecture/l_space.md Open Questions"
+    related_claims: ["ARCH-004"]
+    status: "unresolved"
+    
+  OPEN-005:
+    type: "OPEN"
+    question: "Can temporal binding constraints be implemented efficiently in non-neural substrates without explicit oscillations?"
+    context: "Related to INV-fundamental-2"
+    location: "docs/invariants.md, docs/architecture/entities_and_binding.md Open Questions"
+    related_claims: ["INV-fundamental-2", "MECH-020"]
+    status: "unresolved"
+    
+  OPEN-006:
+    type: "OPEN"
+    question: "What is the minimal set of control channels for REE compliance?"
+    context: "Current specification uses 5 functional channels"
+    location: "docs/architecture/control_plane.md Open Questions"
+    related_claims: ["ARCH-008"]
+    status: "unresolved"
+    
+  OPEN-007:
+    type: "OPEN"
+    question: "What is the canonical term for neuromodulator analogs?"
+    context: "Current usage varies: control signals, neuromodulator analogs, functional channels"
+    location: "docs/glossary.md Open Questions"
+    current_preference: "precision control signals with neuromodulator analog in parentheses"
+    status: "unresolved"
+    
+  OPEN-008:
+    type: "OPEN"
+    question: "What is the minimum viable sleep/offline integration frequency?"
+    context: "Required by INV-007"
+    location: "docs/invariants.md Open Questions"
+    related_claims: ["INV-007", "ARCH-007"]
+    status: "unresolved"
+    
+  OPEN-010:
+    type: "OPEN"
+    question: "What minimal model capacity is required for E1 to support identity continuity?"
+    location: "docs/architecture/e1.md Open Questions"
+    related_claims: ["MECH-002"]
+    status: "unresolved"
+    
+  OPEN-011:
+    type: "OPEN"
+    question: "What is the minimal horizon H for ethical trajectory evaluation?"
+    location: "docs/architecture/e3.md Open Questions"
+    related_claims: ["ARCH-002"]
+    status: "unresolved"
+    
+  OPEN-012:
+    type: "OPEN"
+    question: "What is the relationship between entity binding (REE) and objectness in traditional cognitive architectures?"
+    location: "docs/architecture/entities_and_binding.md Open Questions"
+    related_claims: ["INV-fundamental-2"]
+    status: "unresolved"
+
+  # IMPLEMENTATION NOTES
+  IMPL-015:
+    type: "IMPL"
+    note: "E1 should update significantly slower than E2; exact ratio depends on environment dynamics."
+    location: "docs/architecture/e1.md Open Questions"
+    status: "guidance"
+    
+  IMPL-020:
+    type: "IMPL"
+    note: "E2 horizon should cover immediate action consequences (~100ms to 2 seconds depending on embodiment)."
+    location: "docs/architecture/e2.md Open Questions"
+    status: "guidance"
+    
+  IMPL-025:
+    type: "IMPL"
+    note: "Pure feedforward E2 implementations may work for simple environments but may lack flexibility."
+    location: "docs/architecture/e2.md Open Questions"
+    status: "guidance"
+    
+  IMPL-030:
+    type: "IMPL"
+    note: "When multiple trajectories have equal composite cost, tie-breaking should consider epistemic value and exploration bonus."
+    location: "docs/architecture/e3.md Open Questions"
+    status: "guidance"
+    
+  IMPL-035:
+    type: "IMPL"
+    note: "z_γ should handle cross-modal conflicts via precision-weighted integration, not hard arbitration."
+    location: "docs/architecture/l_space.md Open Questions"
+    status: "guidance"
+    
+  IMPL-040:
+    type: "IMPL"
+    note: "Control plane parameters should be initialized conservatively (balanced precision, moderate commitment threshold)."
+    location: "docs/architecture/control_plane.md Open Questions"
+    status: "guidance"
+    
+  IMPL-045:
+    type: "IMPL"
+    note: "Binding failures can be detected via coherence cost spikes across depths."
+    location: "docs/architecture/entities_and_binding.md Open Questions"
+    status: "guidance"
