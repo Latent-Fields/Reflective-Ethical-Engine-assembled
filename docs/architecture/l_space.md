@@ -1,6 +1,11 @@
-# Latent stack (L-space)
+# Latent Stack (L-space)
 
-> **📍 Canonical Location:** This content has been migrated to [`docs/architecture/l_space.md`](../docs/architecture/l_space.md) with formal claim typing and dependency tracking. This file is preserved for compatibility.
+**Claim Type:** architectural_commitment  
+**Scope:** Multi-timescale latent representation; temporally stratified prediction depths  
+**Depends On:** INV-013 (cognition is predictive, iterative, multi-timescale), INV-002 (coherence includes temporal binding)  
+**Status:** stable
+
+---
 
 REE uses a multi-timescale latent stack to represent temporally displaced prediction depths operating over two primary representational domains:
 (1) a **shared sensory latent** that fuses modality-specific evidence, and

@@ -1,6 +1,11 @@
-# Control plane (precision, gain, and mode regulation)
+# Control Plane (Precision, Gain, and Mode Regulation)
 
-> **📍 Canonical Location:** This content has been migrated to [`docs/architecture/control_plane.md`](../docs/architecture/control_plane.md) with formal claim typing and dependency tracking. This file is preserved for compatibility.
+**Claim Type:** architectural_commitment  
+**Scope:** Precision routing, gain modulation, operating modes, and commitment gating  
+**Depends On:** INV-008 (precision is routed and depth-specific), INV-009 (attention via precision modulation), INV-014 (separation of representation and regulation), [L-space](l_space.md), [E3](e3.md)  
+**Status:** stable
+
+---
 
 ## Role in REE
 

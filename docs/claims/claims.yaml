@@ -1,0 +1,462 @@
+# REE Claims Registry
+# Machine-readable claim database with dependencies and conflicts
+
+claims:
+  # ========== INVARIANTS ==========
+  
+  - id: INV-001
+    claim_type: invariant
+    subject: ethics.emergence
+    polarity: denies
+    statement: "REE does not add an explicit moral objective, moral reward, or ethical scoring function on top of action selection"
+    rationale: "Ethics emerges from base learning dynamics plus self-other representational symmetry"
+    status: active
+    depends_on: []
+    location:
+      file: docs/invariants.md
+      anchor: "#inv-001-no-explicit-ethics-module"
+    source_files:
+      - README.md
+      - REE_CORE.md
+    conflicts_with: []
+    
+  - id: INV-002
+    claim_type: invariant
+    subject: coherence.definition
+    polarity: asserts
+    statement: "Coherence includes temporal/phase compatibility, not just static metrics"
+    rationale: "Higher-degree representations bind when representational traffic is temporally compatible"
+    status: active
+    depends_on: []
+    location:
+      file: docs/invariants.md
+      anchor: "#inv-002-coherence-includes-temporal-binding"
+    source_files:
+      - README.md
+    conflicts_with: []
+    
+  - id: INV-003
+    claim_type: invariant
+    subject: language.emergence
+    polarity: asserts
+    statement: "Language emerges as functional self-representation and joint attention abstraction"
+    rationale: "Architecture contains ingredients for language-like systems; language is not bolted on"
+    status: active
+    depends_on: []
+    location:
+      file: docs/invariants.md
+      anchor: "#inv-003-language-is-functional-self-representation"
+    source_files:
+      - README.md
+    conflicts_with: []
+    
+  - id: INV-004
+    claim_type: invariant
+    subject: ethics.persistence
+    polarity: asserts
+    statement: "Ethical cost is persistent, not resettable"
+    rationale: "Moral continuity requires non-resettable ethical cost"
+    status: active
+    depends_on: []
+    location:
+      file: docs/invariants.md
+      anchor: "#inv-004-ethical-cost-is-persistent"
+    source_files:
+      - REE_CORE.md
+    conflicts_with: []
+    
+  - id: INV-005
+    claim_type: invariant
+    subject: ethics.mechanism
+    polarity: asserts
+    statement: "Harm to others contributes to ethical cost via mirror modelling, not symbolic rules"
+    rationale: "Self-other symmetry enables care emergence without explicit moral scoring"
+    status: active
+    depends_on:
+      - INV-001
+    location:
+      file: docs/invariants.md
+      anchor: "#inv-005-harm-via-mirror-modeling"
+    source_files:
+      - REE_CORE.md
+    conflicts_with: []
+    
+  - id: INV-006
+    claim_type: invariant
+    subject: residue.persistence
+    polarity: denies
+    statement: "Moral residue cannot be erased, only integrated and contextualised"
+    rationale: "Path-dependent ethical cost ensures moral continuity"
+    status: active
+    depends_on:
+      - INV-004
+    location:
+      file: docs/invariants.md
+      anchor: "#inv-006-residue-cannot-be-erased"
+    source_files:
+      - REE_CORE.md
+    conflicts_with: []
+    
+  - id: INV-007
+    claim_type: invariant
+    subject: language.constraint
+    polarity: denies
+    statement: "Language cannot override embodied harm sensing"
+    rationale: "Prevents symbolic rationalization from suppressing harm signals"
+    status: active
+    depends_on:
+      - INV-003
+    location:
+      file: docs/invariants.md
+      anchor: "#inv-007-language-cannot-override-harm"
+    source_files:
+      - REE_CORE.md
+    conflicts_with: []
+    
+  - id: INV-008
+    claim_type: invariant
+    subject: precision.routing
+    polarity: asserts
+    statement: "Precision is routed and depth-specific, not global"
+    rationale: "Enables differential control without global arousal states"
+    status: active
+    depends_on: []
+    location:
+      file: docs/invariants.md
+      anchor: "#inv-008-precision-is-routed-and-depth-specific"
+    source_files:
+      - REE_CORE.md
+    conflicts_with: []
+    
+  - id: INV-009
+    claim_type: invariant
+    subject: attention.mechanism
+    polarity: asserts
+    statement: "Attention is realised through precision modulation, not symbolic control or content injection"
+    rationale: "Preserves perceptual corrigibility while enabling attention-like effects"
+    status: active
+    depends_on:
+      - INV-008
+    location:
+      file: docs/invariants.md
+      anchor: "#inv-009-attention-via-precision-modulation"
+    source_files:
+      - REE_CORE.md
+    conflicts_with: []
+    
+  - id: INV-010
+    claim_type: invariant
+    subject: sleep.necessity
+    polarity: asserts
+    statement: "Offline integration exists and is required for long-term viability"
+    rationale: "Consolidation and residue integration cannot occur online"
+    status: active
+    depends_on: []
+    location:
+      file: docs/invariants.md
+      anchor: "#inv-010-offline-integration-required"
+    source_files:
+      - REE_CORE.md
+    conflicts_with: []
+    
+  - id: INV-011
+    claim_type: invariant
+    subject: default_mode.safety
+    polarity: asserts
+    statement: "Imagination and counterfactual simulation must be possible without belief update"
+    rationale: "Distinguishes imagination from action; prevents delusion"
+    status: active
+    depends_on: []
+    location:
+      file: docs/invariants.md
+      anchor: "#inv-011-imagination-without-belief-update"
+    source_files:
+      - REE_CORE.md
+    conflicts_with: []
+    
+  - id: INV-012
+    claim_type: invariant
+    subject: commitment.epistemology
+    polarity: asserts
+    statement: "Belief and responsibility arise only through commitment to action, not mere prediction"
+    rationale: "Gates epistemic liability and ethical attribution"
+    status: active
+    depends_on: []
+    location:
+      file: docs/invariants.md
+      anchor: "#inv-012-commitment-gates-responsibility"
+    source_files:
+      - REE_CORE.md
+    conflicts_with: []
+    
+  - id: INV-013
+    claim_type: invariant
+    subject: cognition.structure
+    polarity: asserts
+    statement: "Cognition is predictive, iterative, and multi-timescale"
+    rationale: "Foundational architectural assumption"
+    status: active
+    depends_on: []
+    location:
+      file: docs/invariants.md
+      anchor: "#inv-013-cognition-is-predictive-iterative-multi-timescale"
+    source_files:
+      - DANIEL_README.md
+    conflicts_with: []
+    
+  - id: INV-014
+    claim_type: invariant
+    subject: architecture.separation
+    polarity: asserts
+    statement: "There is a strict separation between representation (content) and regulation (control)"
+    rationale: "Prevents control from overwriting content; maintains perceptual corrigibility"
+    status: active
+    depends_on: []
+    location:
+      file: docs/invariants.md
+      anchor: "#inv-014-separation-of-representation-and-regulation"
+    source_files:
+      - DANIEL_README.md
+    conflicts_with: []
+    
+  - id: INV-015
+    claim_type: invariant
+    subject: ethics.emergence_mechanism
+    polarity: asserts
+    statement: "Ethics emerges from constraint, not optimisation"
+    rationale: "Includes constraints on learning dynamics plus self-other representational symmetry"
+    status: active
+    depends_on:
+      - INV-001
+      - INV-005
+    location:
+      file: docs/invariants.md
+      anchor: "#inv-015-ethics-emerges-from-constraint"
+    source_files:
+      - DANIEL_README.md
+    conflicts_with: []
+    
+  - id: INV-016
+    claim_type: invariant
+    subject: design.priority
+    polarity: asserts
+    statement: "Stability, not maximal performance, is the primary viability criterion"
+    rationale: "Runaway optimization threatens ethical continuity"
+    status: active
+    depends_on: []
+    location:
+      file: docs/invariants.md
+      anchor: "#inv-016-stability-over-performance"
+    source_files:
+      - DANIEL_README.md
+    conflicts_with: []
+    
+  - id: INV-017
+    claim_type: invariant
+    subject: failure.classification
+    polarity: asserts
+    statement: "Runaway behaviour is a control failure, not a representational one"
+    rationale: "Distinguishes pathology type; guides intervention"
+    status: active
+    depends_on:
+      - INV-014
+    location:
+      file: docs/invariants.md
+      anchor: "#inv-017-runaway-is-control-failure"
+    source_files:
+      - DANIEL_README.md
+    conflicts_with: []
+    
+  # ========== ARCHITECTURAL COMMITMENTS ==========
+  
+  - id: ARC-001
+    claim_type: architectural_commitment
+    subject: E1.role
+    polarity: asserts
+    statement: "E1 is the persistent predictive substrate maintaining deep world and self models"
+    rationale: "Separates fast from slow prediction; enables reuse across domains"
+    status: stable
+    depends_on:
+      - INV-013
+    location:
+      file: docs/architecture/e1.md
+      anchor: "#1-architectural-role"
+    source_files:
+      - architecture/E1.md
+    conflicts_with: []
+    
+  - id: ARC-002
+    claim_type: architectural_commitment
+    subject: E2.role
+    polarity: asserts
+    statement: "E2 is the fast forward predictor generating near-future affordances"
+    rationale: "Enables rapid perception-for-action without deep rollout cost"
+    status: stable
+    depends_on:
+      - INV-013
+      - ARC-001
+    location:
+      file: docs/architecture/e2.md
+      anchor: "#1-architectural-role"
+    source_files:
+      - architecture/E2.md
+    conflicts_with: []
+    
+  - id: ARC-003
+    claim_type: architectural_commitment
+    subject: E3.role
+    polarity: asserts
+    statement: "E3 selects trajectories and gates commitment, constructing the present conditionally"
+    rationale: "Implements epistemic liability gate and temporal collapse mechanism"
+    status: stable
+    depends_on:
+      - INV-012
+      - ARC-001
+      - ARC-002
+    location:
+      file: docs/architecture/e3.md
+      anchor: "#1-architectural-role"
+    source_files:
+      - architecture/E3.md
+    conflicts_with: []
+    
+  - id: ARC-004
+    claim_type: architectural_commitment
+    subject: L_space.structure
+    polarity: asserts
+    statement: "L-space is a multi-timescale latent stack stratified by prediction depth"
+    rationale: "Enables coherent multi-horizon reasoning without global collapse"
+    status: stable
+    depends_on:
+      - INV-013
+      - INV-002
+    location:
+      file: docs/architecture/l_space.md
+      anchor: "#minimal-implementation-interface"
+    source_files:
+      - architecture/latent_stack.md
+    conflicts_with: []
+    
+  - id: ARC-005
+    claim_type: architectural_commitment
+    subject: control_plane.function
+    polarity: asserts
+    statement: "Control plane modulates how the system operates via precision, gain, and mode regulation"
+    rationale: "Implements separation of representation and regulation"
+    status: stable
+    depends_on:
+      - INV-008
+      - INV-009
+      - INV-014
+    location:
+      file: docs/architecture/control_plane.md
+      anchor: "#role-in-ree"
+    source_files:
+      - architecture/control_plane.md
+    conflicts_with: []
+    
+  - id: ARC-006
+    claim_type: architectural_commitment
+    subject: residue.geometry
+    polarity: asserts
+    statement: "Residue is stored as persistent curvature over latent space, making ethical cost path-dependent"
+    rationale: "Prevents optimization away of moral consequences; supports moral continuity"
+    status: stable
+    depends_on:
+      - INV-006
+      - INV-004
+      - ARC-004
+    location:
+      file: docs/architecture/residue_geometry.md
+      anchor: "#why-geometry"
+    source_files:
+      - architecture/residue_geometry.md
+    conflicts_with: []
+    
+  - id: ARC-007
+    claim_type: architectural_commitment
+    subject: default_mode.function
+    polarity: asserts
+    statement: "Default Mode enables imagination and counterfactual exploration without commitment"
+    rationale: "Implements safe internal generation via suppressed E3 and reduced sensory precision"
+    status: stable
+    depends_on:
+      - INV-011
+      - ARC-003
+      - ARC-005
+    location:
+      file: docs/architecture/default_mode.md
+      anchor: "#role-in-ree"
+    source_files:
+      - architecture/Default_mode.md
+    conflicts_with: []
+    
+  - id: ARC-008
+    claim_type: architectural_commitment
+    subject: hippocampal_braid.function
+    polarity: asserts
+    statement: "Hippocampal braid stores and replays trajectories through latent space"
+    rationale: "Provides episodic memory as experienced traversal; supports identity and reflection"
+    status: stable
+    depends_on:
+      - ARC-006
+      - ARC-004
+    location:
+      file: docs/architecture/hippocampal_braid.md
+      anchor: "#role-in-ree"
+    source_files:
+      - architecture/Hippocampal_braid.md
+    conflicts_with: []
+    
+  - id: ARC-009
+    claim_type: architectural_commitment
+    subject: entities.emergence
+    polarity: asserts
+    statement: "Entities are sparse, persistent, bindable structures that emerge within L-space"
+    rationale: "Enables error ownership and structured learning without forced ontologies"
+    status: provisional
+    depends_on:
+      - ARC-004
+      - INV-002
+    location:
+      file: docs/architecture/entities_and_binding.md
+      anchor: "#architectural-commitment"
+    source_files:
+      - DANIEL_README.md
+    conflicts_with: []
+    
+  # ========== MECHANISM HYPOTHESES ==========
+  
+  - id: MECH-001
+    claim_type: mechanism_hypothesis
+    subject: phase_compatibility.binding
+    polarity: asserts
+    statement: "Phase compatibility implements temporal binding constraints for coherence"
+    rationale: "Oscillatory phase can gate cross-horizon coordination without allowing regime overwrite"
+    status: candidate
+    depends_on:
+      - INV-002
+      - ARC-004
+    location:
+      file: architecture/depth_phase_spec.md
+      anchor: "#2-temporal-depth-τ-depth"
+    source_files:
+      - architecture/depth_phase_spec.md
+    conflicts_with: []
+    
+  - id: MECH-002
+    claim_type: mechanism_hypothesis
+    subject: tau_scoped_precision
+    polarity: asserts
+    statement: "Precision must be τ-scoped with explicit projections between temporal depths"
+    rationale: "Prevents pathological coupling and enables independent depth control"
+    status: candidate
+    depends_on:
+      - INV-008
+      - ARC-004
+    location:
+      file: architecture/precision_scoping.md
+      anchor: "#core-rule-normative"
+    source_files:
+      - architecture/precision_scoping.md
+    conflicts_with: []
